@@ -1,11 +1,11 @@
 all:	scripts
 
-SRC = $(filter-out $(wildcard src/*~) $(wildcard src/.*),$(wildcard src/*))
-GEN = $(SRC:src/%=data/%)
+SRC = $(filter-out $(wildcard gen/*~) $(wildcard gen/.*),$(wildcard gen/*))
+GEN = $(SRC:gen/%=data/%)
 
 scripts:	${GEN}
 
-data/%:	src/%
+data/%:	gen/%
 	$< >$@
 
 clean:
