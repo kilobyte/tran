@@ -1,0 +1,34 @@
+#!/usr/bin/perl -w -CIOE
+use strict;
+
+my @lead=('g','gg','n','d','dd','r','m','b','bb','s','ss','','j','jj','c',
+          'k','t','p','h');
+my @vowel=('a','ae','ya','yae','eo','e','yeo','ye','o','wa','wae','oe','yo',
+           'u','weo','we','wi','yu','eu','yi','i');
+my @tail=('','g','gg','gs','n','nj','nh','d','l','lg','lm','lb','ls','lt',
+          'lp','lh','m','b','bs','s','ss','ng','j','c','k','t','p','h');
+
+sub u($) { return pack 'U', $_[0]; }
+
+my ($x,$y,$z);
+
+print "SCRIPT hangul\n";
+
+print "\n#lone lead consonants\n";
+for $x (0..$#lead)	{ $_=$lead[$x]; s/^$/*/;print u($x+0x1100),"\t>\t$_\n"; }
+print "\n#lone vowels\n";
+for $x (0..$#vowel)	{ $_=$vowel[$x];s/^$/*/;print u($x+0x1161),"\t>\t$_\n"; }
+print "\n#lone tail consonants\n";
+for $x (0..$#tail)	{ $_=$tail[$x]; s/^$/*/;print u($x+0x11A7),"\t>\t$_\n"; }
+
+print "\n#composed hangul\n";
+for $x (0..$#lead)
+{
+    for $y (0..$#vowel)
+    {
+        for $z (0..$#tail)
+        {
+            print u($x*588+$y*28+$z+0xAC00),"\t$lead[$x]$vowel[$y]$tail[$z]\n";
+        }
+    }
+}

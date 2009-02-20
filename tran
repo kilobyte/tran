@@ -1,0 +1,131 @@
+#!/usr/bin/perl -w -CLIOE
+use strict;
+use locale;
+
+my $TARGET;
+my $DATA="data";
+my ($H,$O)=('','');
+
+while(@ARGV)
+{
+    $_=shift;
+    if (/^-t|--target$/)
+    {
+        !defined($TARGET) or die "$O: target charset specified twice.\n";
+        @ARGV or die "$0: $_ requires an argument.\n";
+        $TARGET=shift;
+    }
+    elsif (/^-c|--config$/)
+    {
+        @ARGV or die "$0: $_ requires an argument.\n";
+        $DATA=shift;
+    }
+    elsif (/^-d|--debug$/)
+    {
+        ($H,$O)=("\e[31m","\e[0m");
+    }
+    else
+    {
+        die "$0: Unknown argument: $_\n";
+    }
+}
+
+my %tran=('latin'=>{});
+my $maxlen=0;
+defined $TARGET or $TARGET="latin";
+
+sub tran_one
+{
+    my ($l,$r,$ls,$rs)=@_;
+    !defined ${$tran{$ls}}{$l}
+        or die "Conflict for [$l] in $rs>$ls, it resolves to [${$tran{$ls}}{$l}] and [$r]\n";
+    $r =~ s/\*//; # '*' is the carrier for combining chars and empty string
+    ${$tran{$ls}}{$l}=$r;
+    length($l)<$maxlen or $maxlen=length($l);
+    length($r)<$maxlen or $maxlen=length($r);
+}
+  
+sub read_config_file($)
+{
+    my ($f)=@_;
+    undef my $SCRIPT;
+    
+    unless (open F, "<utf8", $f)
+    {
+        warn "Can't read file: $f\n";
+        return;
+    }
+    while(<F>)
+    {
+        chomp;
+        s/#.*// unless s/#VERBATIM#$//;
+        s/^\s+//;
+        s/\s+$//;
+        next if /^$/;
+        
+        if (m{^SCRIPT(?:\s+|:\s*)([a-zA-Z0-9_/-]+)$})
+        {
+            $SCRIPT="\L$1";
+            !defined($tran{"$SCRIPT"}) or die "Script $SCRIPT defined twice, 2nd time in $f\n";
+            $tran{"$SCRIPT"}={};
+            next;
+        }
+        /(\S+)\s*(|<|>|=|\s)\s*(\S+)$/
+            or die "$f: cannot parse line: [$H$_$O]\n";
+        defined $SCRIPT
+            or die "$f: character found before SCRIPT started\n";
+        tran_one("\L$1", "\L$3", 'latin', $SCRIPT) unless $2 eq '<';
+        tran_one("\L$3", "\L$1", $SCRIPT, 'latin') unless $2 eq '>';
+    }
+    close F;
+}
+
+sub read_config
+{
+    my ($f)=@_;
+    return read_config_file($f) if -f $f;
+    unless(opendir(DIR, $f))
+    {
+        warn "Can't read dir: $f\n";
+        return;
+    }
+    read_config("$f/$_") for sort grep /^[a-zA-Z0-9_-]+$/, readdir DIR;
+    closedir DIR;
+}
+
+read_config($DATA);
+
+$tran{$TARGET}
+  or die "Unknown target script.  Valid ones:\n".join("\n",sort keys %tran)."\n";
+
+sub tran_shift($)
+{
+    my ($t)=@_;
+    my ($l,$r,$lc);
+        
+    for(my $len=$maxlen;$len;$len--)
+    {
+        # Slooow, but lowercasing/consuming can be very tricky because some
+        # characters like ß expand.
+        next unless defined ($r=${$t}{$lc=lc($l=substr($_,0,$len))});
+        substr($_,0,$len)='';
+        if ($lc ne $l)	#input was not in lowercase
+        {
+            $r=/^\p{IsLower}/? ucfirst($r) : uc($r);  #UPPER vs Title case
+        }
+        print $r;
+        return 1;
+    }
+    return 0;
+}
+
+while(<>)
+{
+    #s/\x{0130}/I\x{0307}/g; # The only character which expands when lowercasing.
+    while($_ ne '')
+    {
+        next if tran_shift($tran{$TARGET});
+        print $H,substr($_,0,1),$O;
+        substr($_,0,1)='';
+    }
+}

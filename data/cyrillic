@@ -1,0 +1,121 @@
+SCRIPT cyrillic
+# Based on BGN/PCGN romanization for Russian.
+# Ё uses yo instead of ë.  What did the BGN think?
+
+а	a
+б	b
+в	v
+г	g
+д	d
+#[\vйьъ^]е	ye	#### FIXME
+е	ye
+#[^\vйьъ^]е	e
+#BGN	[\vйьъ^]ё	yë
+#BGN	[^\vйьъ^]ё	ë
+ё	yo
+ж	zh
+з	z
+и	i
+#й[ауыэ]		y∙
+#й[^ауыэ]	y
+й	>	y	##### FIXME, should work both ways
+
+к	k
+л	l
+м	m
+н	n
+о	o
+п	p
+р	r
+с	s
+т	t
+у	u
+ф	f
+х	kh
+ц	ts
+ч	ch
+ш	sh
+щ	shch
+ъ	>	”
+#ы[ауыэ]	y∙
+#ы[^ауыэ]	y
+ы	y
+Ь	>	’
+э	e
+ю	yu
+я	ya
+тс	t∙s
+шч	sh∙ch
+
+# Rare non-Slavic, from Wikipedia.
+ӑ	>	a
+ä	>	a
+ә	>	a
+ӛ	>	a
+ӕ	>	ae
+ғ	>	gh
+ӷ	>	g
+ҕ	>	g
+ӗ	>	ye
+ҽ	>	ts
+ҿ	>	ch
+ӂ	>	g
+җ	>	zhj
+ӝ	>	dz
+ҙ	>	dh
+ӟ	>	z
+ӡ	>	dz
+ӥ	>	y
+ӣ	>	i
+ӏ	>	NULL
+ҋ	>	j
+қ	>	qa
+ҟ	>	k
+ҡ	>	q
+ӄ	>	q
+ҝ	>	g
+ӆ	>	l
+ӎ	>	m
+ҥ	>	ng
+ң	>	ng
+ӊ	>	n
+ӈ	>	ng
+ӧ	>	a
+ө	>	oe
+ӫ	>	oe
+ҩ	>	o
+Ҧ	>	p
+ҏ	>	r
+ҫ	>	th
+ҭ	>	t'
+ӳ	>	y
+ӱ	>	y
+ӯ	>	ø
+ү	>	ue
+ұ	>	u
+ҳ	>	kh
+һ	>	shh
+ҵ	>	ts'
+ӵ	>	ch
+ҷ	>	j
+ӌ	>	dz
+ҹ	>	g
+ӹ	>	i
+ҍ	>	'
+ӭ	>	e
+
+#Archaic, from Wikipedia.
+ҁ	>	ch
+ѹ	>	u
+ѡ	>	o
+ѿ	>	ot
+ѻ	>	o
+ѣ	>	ya
+ѥ	>	ie
+#ѫ	hrm, how to transcribe it?
+#ѭ
+ѯ	>	x
+ѱ	>	ps
+ѳ	>	th
+ѵ	>	i
+Ѷ	>	i
