@@ -1,0 +1,46 @@
+SCRIPT greek
+
+α	a
+β	b
+β <	v
+γ	g
+δ	d
+ε	e
+ζ	z
+ζ <	dz
+η	ē
+θ	th
+ι	i
+κ <	c
+κ	k
+λ	l
+μ	m
+ν	n
+ξ	x
+ο	o
+π	p
+ρ	r
+ρ <	rh
+σ	s
+τ	t
+υ	y
+φ	ph
+φ <	f
+χ	ch
+χ <	h
+ψ	ps
+ω >	o
+
+αι	ae
+γγ	ng
+ου	u
+
+ȷ	j
+
+ϝ >	w
+ϛ >	st
+ͱ >	h
+ϻ >	s
+ϸ >	sh
+ϟ >	q
+ϡ >	ss
