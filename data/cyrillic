@@ -7,9 +7,11 @@ SCRIPT cyrillic
 в	v
 г	g
 д	d
-#[\vйьъ^]е	ye	#### FIXME
-е	ye
+#[\vйьъ^]е	ye	#### FIXME - should depend on context
 #[^\vйьъ^]е	e
+е	>	e
+е	<	ye
+ев	eu
 #BGN	[\vйьъ^]ё	yë
 #BGN	[^\vйьъ^]ё	ë
 ё	yo
@@ -46,6 +48,13 @@ SCRIPT cyrillic
 я	ya
 тс	t∙s
 шч	sh∙ch
+
+# Ukrainian
+є	>	e
+єв	>	eu
+і	>	i
+ї	>	ji
+ґ	>	g
 
 # Rare non-Slavic, from Wikipedia.
 ӑ	>	a
