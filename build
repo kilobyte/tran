@@ -1,0 +1,84 @@
+#!/usr/bin/perl -w
+use strict;
+use locale;
+use open ':utf8';
+
+my %tran=('latin'=>{});
+my $maxlen=0;
+
+sub tran_one
+{
+    my ($l,$r,$ls,$rs)=@_;
+    !defined ${$tran{$ls}}{$l}
+        or die "Conflict for [$l] in $rs>$ls, it resolves to [${$tran{$ls}}{$l}] and [$r]\n";
+    $r =~ s/\*//; # '*' is the carrier for combining chars and empty string
+    ${$tran{$ls}}{$l}=$r;
+    length($l)<$maxlen or $maxlen=length($l);
+    length($r)<$maxlen or $maxlen=length($r);
+}
+  
+sub read_config_file($)
+{
+    my ($f)=@_;
+    undef my $SCRIPT;
+    
+    unless (open F, "<utf8", $f)
+    {
+        warn "Can't read file: $f\n";
+        return;
+    }
+    print "Reading $f\n";
+    while(<F>)
+    {
+        chomp;
+        s/#.*// unless s/#VERBATIM#$//;
+        s/^\s+//;
+        s/\s+$//;
+        next if /^$/;
+        
+        if (m{^SCRIPT(?:\s+|:\s*)([a-zA-Z0-9_/-]+)$})
+        {
+            $SCRIPT="\L$1";
+            defined($tran{"$SCRIPT"}) or $tran{"$SCRIPT"}={};
+            next;
+        }
+        /(\S+)\s*(|<|>|=|\s)\s*(\S+)$/
+            or die "$f: cannot parse line: [$_]\n";
+        defined $SCRIPT  or $2 eq '>'
+            or die "$f: character found before SCRIPT started\n";
+        tran_one("\L$1", "\L$3", 'latin', $SCRIPT) unless $2 eq '<';
+        tran_one("\L$3", "\L$1", $SCRIPT, 'latin') unless $2 eq '>';
+    }
+    close F;
+}
+
+sub read_config
+{
+    my ($f)=@_;
+    return read_config_file($f) if -f $f;
+    unless(opendir(DIR, $f))
+    {
+        warn "Can't read dir: $f\n";
+        return;
+    }
+    read_config("$f/$_") for sort grep /^[a-zA-Z0-9_-]+$/, readdir DIR;
+    closedir DIR;
+}
+
+read_config("data");
+
+for my $script (keys %tran)
+{
+    print "[$script]\n";
+    open HASH, "|./makehash hashes/$script" or die "Can't run makehash\n";
+    for (sort keys %{$tran{$script}})
+    {
+        print HASH "\U$_\n";
+        print HASH "\U${$tran{$script}}{$_}\n";
+        print HASH "\u$_\n";
+        print HASH "\u${$tran{$script}}{$_}\n";
+        print HASH "$_\n";
+        print HASH "${$tran{$script}}{$_}\n";
+    }
+    close HASH;
+}
