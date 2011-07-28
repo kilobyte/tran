@@ -11,6 +11,7 @@ SCRIPT cyrillic
 #[^\vйьъ^]е	e
 е	>	e
 е	<	ye
+е	<	ie
 ев	eu
 #BGN	[\vйьъ^]ё	yë
 #BGN	[^\vйьъ^]ё	ë
@@ -29,6 +30,7 @@ SCRIPT cyrillic
 о	o
 п	p
 р	r
+р	<	rr
 с	s
 т	t
 у	u
@@ -36,6 +38,7 @@ SCRIPT cyrillic
 х	kh
 ц	ts
 ч	ch
+кр	chr
 ш	sh
 щ	shch
 ъ	>	”
@@ -45,7 +48,9 @@ SCRIPT cyrillic
 Ь	>	’
 э	e
 ю	yu
+ю	<	iu
 я	ya
+я	<	ia
 тс	t∙s
 шч	sh∙ch
 
