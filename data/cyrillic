@@ -22,8 +22,10 @@ SCRIPT cyrillic
 #й[ауыэ]		y∙
 #й[^ауыэ]	y
 й	>	y	##### FIXME, should work both ways
-
+й	<	j
 к	k
+кс	x
+к	<	q
 л	l
 м	m
 н	n
@@ -36,6 +38,8 @@ SCRIPT cyrillic
 у	u
 ф	f
 х	kh
+х	<	h
+ц	<	c
 ц	ts
 ч	ch
 кр	chr
