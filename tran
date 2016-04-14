@@ -50,6 +50,7 @@ sub read_config_file($)
 {
     my ($f)=@_;
     undef my $SCRIPT;
+    my $NOLOWER=0;
     
     unless (open F, "<utf8", $f)
     {
@@ -64,7 +65,12 @@ sub read_config_file($)
         s/\s+$//;
         next if /^$/;
         
-        if (m{^SCRIPT(?:\s+|:\s*)([a-zA-Z0-9_/-]+)$})
+        if (/^NOLOWER/)
+        {
+            $NOLOWER=1;
+            next;
+        }
+        if (m{^SCRIPT(?:\s+|:\s*)([a-zA-Z0-9_/ -]+)$})
         {
             $SCRIPT="\L$1";
             !defined($tran{"$SCRIPT"}) or die "Script $SCRIPT defined twice, 2nd time in $f\n";
@@ -75,8 +81,16 @@ sub read_config_file($)
             or die "$f: cannot parse line: [$H$_$O]\n";
         defined $SCRIPT
             or die "$f: character found before SCRIPT started\n";
-        tran_one("\L$1", "\L$3", 'latin', $SCRIPT) unless $2 eq '<';
-        tran_one("\L$3", "\L$1", $SCRIPT, 'latin') unless $2 eq '>';
+        unless ($NOLOWER)
+        {
+            tran_one("\L$1", "\L$3", 'latin', $SCRIPT) unless $2 eq '<';
+            tran_one("\L$3", "\L$1", $SCRIPT, 'latin') unless $2 eq '>';
+        }
+        else
+        {
+            tran_one("$1", "$3", 'latin', $SCRIPT) unless $2 eq '<';
+            tran_one("$3", "$1", $SCRIPT, 'latin') unless $2 eq '>';
+        }
     }
     close F;
 }
@@ -108,14 +122,27 @@ sub tran_shift($)
     {
         # Slooow, but lowercasing/consuming can be very tricky because some
         # characters like ß expand.
-        next unless defined ($r=${$t}{$lc=lc($l=substr($_,0,$len))});
-        substr($_,0,$len)='';
-        if ($lc ne $l)	#input was not in lowercase
+
+        # Because of glibc not supporting lowercasing some scripts yet,
+        # we need to try uppercase first manually.
+        $l=substr($_,0,$len);
+        if (defined ($r=${$t}{$l}))
         {
-            $r=/^\p{IsLower}/? ucfirst($r) : uc($r);  #UPPER vs Title case
+            substr($_,0,$len)='';
+            print $r;
+            return 1;
         }
-        print $r;
-        return 1;
+
+        $lc=lc($l);
+        next unless ($lc ne $l);  #input was not in lowercase
+
+        if (defined ($r=${$t}{$lc}))
+        {
+            substr($_,0,$len)='';
+            $r=/^\p{IsLower}/? ucfirst($r) : uc($r);  #UPPER vs Title case
+            print $r;
+            return 1;
+        }
     }
     return 0;
 }
