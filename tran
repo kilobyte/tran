@@ -14,7 +14,7 @@ while(@ARGV)
     {
         # No longer required.
     }
-    elsif (/^-c|--config$/)
+    elsif (/^--data-dir$/)
     {
         @ARGV or die "$0: $_ requires an argument.\n";
         $DATA=shift;
