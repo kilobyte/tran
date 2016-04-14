@@ -12,9 +12,7 @@ while(@ARGV)
     $_=shift;
     if (/^-t|--target$/)
     {
-        !defined($TARGET) or die "$O: target charset specified twice.\n";
-        @ARGV or die "$0: $_ requires an argument.\n";
-        $TARGET=shift;
+        # No longer required.
     }
     elsif (/^-c|--config$/)
     {
@@ -25,15 +23,20 @@ while(@ARGV)
     {
         ($H,$O)=("\e[31m","\e[0m");
     }
+    elsif (/^-/)
+    {
+        die "$0: Unknown option: $_\n";
+    }
     else
     {
-        die "$0: Unknown argument: $_\n";
+        $TARGET.=" $_";
     }
 }
 
 my %tran=('latin'=>{});
 my $maxlen=0;
 defined $TARGET or $TARGET="latin";
+$TARGET=~s/^\s*//;
 
 sub tran_one
 {
@@ -111,7 +114,7 @@ sub read_config
 read_config($DATA);
 
 $tran{$TARGET}
-  or die "Unknown target script.  Valid ones:\n".join("\n",sort keys %tran)."\n";
+  or die "Unknown script \"$TARGET\".  Valid ones:\n".join("\n",sort keys %tran)."\n";
 
 sub tran_shift($)
 {
