@@ -1,0 +1,19 @@
+This tool can transliterate/transcribe text both ways between the Latin script and:
+
+greek: γρεεκ
+cyrillic: цыриллиц
+devanagari: दएवअनअगअरइ
+futhark: ᚠᚢᚦᚨᚱᚲ
+hiragana: ひらがな
+katakana: カタカナ
+hangul: 항울
+
+ascii (dropping accents, expanding digraphs)
+ｆｕｌｌｗｉｄｔｈ
+ꜱᴍᴀʟʟᴄᴀᴘꜱ
+
+Unicode Plane 1 mathematical characters:
+𝐛𝐨𝐥𝐝, 𝑖𝑡𝑎𝑙𝑖𝑐, 𝒃𝒐𝒍𝒅 𝒊𝒕𝒂𝒍𝒊𝒄, 𝓈𝒸𝓇𝒾𝓅𝓉, 𝓫𝓸𝓵𝓭 𝓼𝓬𝓻𝓲𝓹𝓽, 𝔣𝔯𝔞𝔨𝔱𝔲𝔯, 𝕕𝕠𝕦𝕓𝕝𝕖-𝕤𝕥𝕣𝕦𝕔𝕜,
+𝖇𝖔𝖑𝖉 𝖋𝖗𝖆𝖐𝖙𝖚𝖗, 𝗌𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿, 𝘀𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗯𝗼𝗹𝗱, 𝘴𝘢𝘯𝘴-𝘴𝘦𝘳𝘪𝘧 𝘪𝘵𝘢𝘭𝘪𝘤,
+𝙨𝙖𝙣𝙨-𝙨𝙚𝙧𝙞𝙛 𝙗𝙤𝙡𝙙 𝙞𝙩𝙖𝙡𝙞𝙘, 𝚖𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎
+(beware, many of your recipients may lack fonts necessary to display these)
