@@ -37,6 +37,7 @@ my %tran=('latin'=>{});
 my $maxlen=0;
 defined $TARGET or $TARGET="latin";
 $TARGET=~s/^\s*//;
+$TARGET="\L$TARGET";
 
 sub tran_one
 {
