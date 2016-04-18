@@ -65,9 +65,9 @@ SCRIPT hiragana
 りゅ	ryu
 りょ	ryo
 わ	wa
-ゐ	>	wi	#obsolete
-ゑ	>	we	#obsolete
-を	wo		#spelt "o"
+ゐ >	wi	#obsolete
+ゑ >	we	#obsolete
+を	wo	#spelt "o"
 ん	n
 が	ga
 ぎ	gi
@@ -86,13 +86,13 @@ SCRIPT hiragana
 じゅ	ju
 じょ	jo
 だ	da
-ぢ	>	ji
-づ	>	zu
+ぢ >	ji
+づ >	zu
 で	de
 ど	do
-ぢゃ	>	ja
-ぢゅ	>	ju
-ぢょ	>	jo
+ぢゃ >	ja
+ぢゅ >	ju
+ぢょ >	jo
 ば	ba
 び	bi
 ぶ	bu

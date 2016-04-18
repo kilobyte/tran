@@ -3,8 +3,8 @@ SCRIPT futhark
 ᛇ	ae
 ᚨ	a
 ᛒ	b
-ᚲ	<	c
-ᚲ	<	ck
+ᚲ <	c
+ᚲ <	ck
 ᛞ	d
 ᛖ	e
 ᚠ	f
@@ -18,7 +18,7 @@ SCRIPT futhark
 ᛜ	ng
 ᚾ	n
 ᛟ	o
-ᚠ	<	ph
+ᚠ <	ph
 ᛈ	p
 ᛩ	q
 ᚱ	r

@@ -66,9 +66,9 @@ SCRIPT katakana
 リュ	ryu
 リョ	ryo
 ワ	wa
-ヰ	>	wi	#obsolete
-ヱ	>	we	#obsolete
-ヲ	>	wo	#spelt "o"
+ヰ >	wi	#obsolete
+ヱ >	we	#obsolete
+ヲ >	wo	#spelt "o"
 ン	n
 ガ	ga
 ギ	gi
@@ -87,13 +87,13 @@ SCRIPT katakana
 ジュ	ju
 ジョ	jo
 ダ	da
-ヂ	>	ji
-ヅ	>	zu
+ヂ >	ji
+ヅ >	zu
 デ	de
 ド	do
-ヂャ	>	ja
-ヂュ	>	ju
-ヂョ	>	jo
+ヂャ >	ja
+ヂュ >	ju
+ヂョ >	jo
 バ	ba
 ビ	bi
 ブ	bu
@@ -116,10 +116,10 @@ SCRIPT katakana
 ウィ	wi
 ウェ	we
 ウォ	wo
-ヷ	>	va	#obsolete
-ヸ	>	vi	#obsolete
-ヹ	>	ve	#obsolete
-ヺ	>	vo	#obsolete
+ヷ >	va	#obsolete
+ヸ >	vi	#obsolete
+ヹ >	ve	#obsolete
+ヺ >	vo	#obsolete
 ヴァ	va
 ヴィ	vi
 ヴ	vu

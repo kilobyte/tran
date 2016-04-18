@@ -9,9 +9,9 @@ SCRIPT cyrillic
 д	d
 #[\vйьъ^]е	ye	#### FIXME - should depend on context
 #[^\vйьъ^]е	e
-е	>	e
-е	<	ye
-е	<	ie
+е >	e
+е <	ye
+е <	ie
 ев	eu
 #BGN	[\vйьъ^]ё	yë
 #BGN	[^\vйьъ^]ё	ë
@@ -19,121 +19,121 @@ SCRIPT cyrillic
 ж	zh
 з	z
 и	i
-#й[ауыэ]		y∙
+#й[ауыэ]	y∙
 #й[^ауыэ]	y
-й	>	y	##### FIXME, should work both ways
-й	<	j
+й >	y	##### FIXME, should work both ways
+й <	j
 к	k
 кс	x
-к	<	q
+к <	q
 л	l
 м	m
 н	n
 о	o
 п	p
 р	r
-р	<	rr
+р <	rr
 с	s
 т	t
 у	u
 ф	f
 х	kh
-х	<	h
-ц	<	c
+х <	h
+ц <	c
 ц	ts
 ч	ch
 кр	chr
 ш	sh
 щ	shch
-ъ	>	”
+ъ >	”
 #ы[ауыэ]	y∙
 #ы[^ауыэ]	y
 ы	y
-Ь	>	’
+Ь >	’
 э	e
 ю	yu
-ю	<	iu
+ю <	iu
 я	ya
-я	<	ia
+я <	ia
 тс	t∙s
 шч	sh∙ch
 
 # Ukrainian
-є	>	e
-єв	>	eu
-і	>	i
-ї	>	ji
-ґ	>	g
+є >	e
+єв >	eu
+і >	i
+ї >	ji
+ґ >	g
 
 # Rare non-Slavic, from Wikipedia.
-ӑ	>	a
-ä	>	a
-ә	>	a
-ӛ	>	a
-ӕ	>	ae
-ғ	>	gh
-ӷ	>	g
-ҕ	>	g
-ӗ	>	ye
-ҽ	>	ts
-ҿ	>	ch
-ӂ	>	g
-җ	>	zhj
-ӝ	>	dz
-ҙ	>	dh
-ӟ	>	z
-ӡ	>	dz
-ӥ	>	y
-ӣ	>	i
-ӏ	>	NULL
-ҋ	>	j
-қ	>	qa
-ҟ	>	k
-ҡ	>	q
-ӄ	>	q
-ҝ	>	g
-ӆ	>	l
-ӎ	>	m
-ҥ	>	ng
-ң	>	ng
-ӊ	>	n
-ӈ	>	ng
-ӧ	>	a
-ө	>	oe
-ӫ	>	oe
-ҩ	>	o
-Ҧ	>	p
-ҏ	>	r
-ҫ	>	th
-ҭ	>	t'
-ӳ	>	y
-ӱ	>	y
-ӯ	>	ø
-ү	>	ue
-ұ	>	u
-ҳ	>	kh
-һ	>	shh
-ҵ	>	ts'
-ӵ	>	ch
-ҷ	>	j
-ӌ	>	dz
-ҹ	>	g
-ӹ	>	i
-ҍ	>	'
-ӭ	>	e
+ӑ >	a
+ä >	a
+ә >	a
+ӛ >	a
+ӕ >	ae
+ғ >	gh
+ӷ >	g
+ҕ >	g
+ӗ >	ye
+ҽ >	ts
+ҿ >	ch
+ӂ >	g
+җ >	zhj
+ӝ >	dz
+ҙ >	dh
+ӟ >	z
+ӡ >	dz
+ӥ >	y
+ӣ >	i
+ӏ >	NULL
+ҋ >	j
+қ >	qa
+ҟ >	k
+ҡ >	q
+ӄ >	q
+ҝ >	g
+ӆ >	l
+ӎ >	m
+ҥ >	ng
+ң >	ng
+ӊ >	n
+ӈ >	ng
+ӧ >	a
+ө >	oe
+ӫ >	oe
+ҩ >	o
+Ҧ >	p
+ҏ >	r
+ҫ >	th
+ҭ >	t'
+ӳ >	y
+ӱ >	y
+ӯ >	ø
+ү >	ue
+ұ >	u
+ҳ >	kh
+һ >	shh
+ҵ >	ts'
+ӵ >	ch
+ҷ >	j
+ӌ >	dz
+ҹ >	g
+ӹ >	i
+ҍ >	'
+ӭ >	e
 
 #Archaic, from Wikipedia.
-ҁ	>	ch
-ѹ	>	u
-ѡ	>	o
-ѿ	>	ot
-ѻ	>	o
-ѣ	>	ya
-ѥ	>	ie
+ҁ >	ch
+ѹ >	u
+ѡ >	o
+ѿ >	ot
+ѻ >	o
+ѣ >	ya
+ѥ >	ie
 #ѫ	hrm, how to transcribe it?
 #ѭ
-ѯ	>	x
-ѱ	>	ps
-ѳ	>	th
-ѵ	>	i
-Ѷ	>	i
+ѯ >	x
+ѱ >	ps
+ѳ >	th
+ѵ >	i
+Ѷ >	i
