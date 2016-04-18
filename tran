@@ -1,7 +1,5 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl -w -CIOE
 use strict;
-use locale;
-use open ':locale';
 
 my $TARGET;
 my $DATA="data";
