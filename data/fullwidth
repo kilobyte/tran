@@ -1,4 +1,5 @@
 SCRIPT fullwidth
+ALIAS wide
 #CJK "fullwidth" (ie, doublewidth) ASCII characters
 
 ！	!

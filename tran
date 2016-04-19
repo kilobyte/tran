@@ -32,6 +32,7 @@ while(@ARGV)
 }
 
 my %tran=('latin'=>{});
+my %alias;
 my $maxlen=0;
 defined $TARGET or $TARGET="latin";
 $TARGET=~s/^\s*//;
@@ -75,6 +76,11 @@ sub read_config_file($)
         if (/^ALLUPPER/)
         {
             $NOLOWER=2;
+            next;
+        }
+        if (m{^ALIAS(?:\s+|:\s*)([a-zA-Z0-9_/ -]+)$})
+        {
+            $alias{"\L$1"}=$SCRIPT;
             next;
         }
         if (m{^SCRIPT(?:\s+|:\s*)([a-zA-Z0-9_/ -]+)$})
@@ -122,6 +128,7 @@ sub read_config
 
 read_config($DATA);
 
+$TARGET=$alias{$TARGET} if $alias{$TARGET};
 $tran{$TARGET}
   or die "Unknown script \"$TARGET\".  Valid ones:\n".join("\n",sort keys %tran)."\n";
 
