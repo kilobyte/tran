@@ -1,0 +1,60 @@
+=head1 NAME
+
+tran - transcribe between character scripts
+
+=head1 SYNOPSIS
+
+B<tran> E<lt>I<input>
+
+B<echo> Hello world B<|> B<tran> I<script>
+
+=head1 DESCRIPTION
+
+B<tran> lets you convert between Latin and a number of other character
+scripts.  It works as a filter, reading standard input and writing to the
+standard output.
+
+Please specify the target script as the argument.  If none is given, the
+default is latin.  Specify something invalid to get the list of supported
+scripts.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-d>, B<--debug>
+
+marks characters that haven't been touched in color.  The output must go to a
+terminal, "B<less -R>" or something that can understand ANSI colors.
+
+=back
+
+=head1 CAVEATS
+
+There is currently no triangulation -- to go between two scripts other than
+latin you need to convert to latin first.
+
+This especially matters for I<ascii>: to convert, eg, cyrillic text, you
+need to use a pipe: B<tran|tran ascii>.
+
+The I<ascii> conversion, like any other, leaves characters it doesn't have
+data for intact, leading to non-ASCII output.  This might be what you want
+if you need to just drop diacritics and expand digraphs, but if you're after
+pure 7-bit text, use "B<tran ascii|perl -CIO -pe 'tr /\x1-\x7e/?/c'>"
+(B</usr/bin/tr> works on bytes not characters).
+
+Not all of your recipients may have all required fonts, especially for Plane
+1 scripts.  Such support is especially bad on old terminals that use bitmap
+fonts, such as I<xterm>, text-mode Linux or pre-Windows 10 console.
+
+=head1 BUGS
+
+Ancient (ie, non-Unicode) charsets are not supported at all.  B<tran> will
+obliviously write UTF-8 even when inappropriate.
+
+This tool is pretty slow, especially on startup.  If this is a problem for
+anyone, please holler -- I did not optimize it at all.
+
+=head1 AUTHOR
+
+Adam Borowski (kilobyte@angband.pl)
