@@ -1,0 +1,39 @@
+Source: tran
+Section: text
+Priority: optional
+Maintainer: Adam Borowski <kilobyte@angband.pl>
+Build-Depends: debhelper (>=9.20160402~)
+Standards-Version: 3.9.8
+Homepage: https://github.com/kilobyte/tran
+Vcs-Git: https://github.com/kilobyte/tran.git -b debian
+Vcs-Browser: https://github.com/kilobyte/tran/tree/debian
+
+Package: tran
+Architecture: all
+Depends: ${misc:Depends}
+Description: transcribe between character scripts (alphabets)
+ This tool lets you transliterate, with a ¼-hearted attempt at transcription,
+ both ways between Latin and a number of other writing scripts.  Thus for
+ example the word “Debian” is “Дэбян” in Cyrillic or “Δεβιαν” in Greek.
+ Conversion to Latin lets you understand foreign text (at least names if not
+ meaning), conversion from Latin is for fun, i10n testing, etc.
+ .
+ Supported scripts:
+  * latin
+  * cyrillic
+  * greek
+  * devanagari
+  * futhark (runes)
+  * hiragana
+  * katakana
+  * ascii (Latin without diacritics or digraphs)
+  * fullwidth (double-width ASCII)
+  * smallcaps
+  * Unicode Plane 1 "math" characters: bold, italic, bold italic, script,
+    bold script, fraktur, double-struck, bold fraktur, sans-serif,
+    sans-serif bold, sans-serif italic, sans-serif bold italic,
+    monospace
+  * enclosed alphanumerics: circled, parenthesized, squared, negative
+    circled, negative squared, regional indicators
+ Support for arabic and hebrew is not possible; if you want some other script
+ please let me know.

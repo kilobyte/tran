@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ 
+
+override_dh_auto_build-indep:
+	LC_ALL=C.UTF-8 dh_auto_build -i
+
+override_dh_auto_install:
+	sed 's|"data"|"/usr/share/tran"|' <tran >$(CURDIR)/debian/tran/usr/bin/tran
