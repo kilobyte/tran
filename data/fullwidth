@@ -5,7 +5,7 @@ ALIAS wide
 U+3000	U+20	# space
 ！	!
 ＂	"
-＃	#	#VERBATIM#
+＃	U+23	# hash
 ＄	$
 ％	%
 ＆	&

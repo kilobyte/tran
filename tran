@@ -63,7 +63,6 @@ sub read_config_file($)
     while(<F>)
     {
         chomp;
-        s/#.*// unless s/#VERBATIM#$//;
         s/^\s+//;
         s/\s+$//;
         next if /^$/;
