@@ -63,6 +63,7 @@ sub read_config_file($)
     while(<F>)
     {
         chomp;
+        s/#.*//;
         s/^\s+//;
         s/\s+$//;
         next if /^$/;
