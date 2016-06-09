@@ -15,8 +15,7 @@ scripts.  It works as a filter, reading standard input and writing to the
 standard output.
 
 Please specify the target script as the argument.  If none is given, the
-default is latin.  Specify something invalid to get the list of supported
-scripts.
+default is latin.  Specify "I<list>" to get the list of supported scripts.
 
 =head1 OPTIONS
 

@@ -132,6 +132,7 @@ sub read_config
 read_config($DATA);
 
 $TARGET=$alias{$TARGET} if $alias{$TARGET};
+print(join("\n",sort keys %tran)."\n"), exit if $TARGET eq "list";
 $tran{$TARGET}
   or die "Unknown script \"$TARGET\".  Valid ones:\n".join("\n",sort keys %tran)."\n";
 
