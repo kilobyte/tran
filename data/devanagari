@@ -50,22 +50,28 @@ SCRIPT devanagari
 र	r
 ल	l
 व	v
-श	ś
+व <	w
+श	sh
 ष	ṣ
 स	s
 ह	h
 
 #Consonant Clusters
-क्ष	kṣ
+क्ष	ksh
 त्र	tr
-ज्ञ	jñ
-श्र	śr
+ज्ञ	gy
+श्र	shr
 
 #Other Consonants
-क़ >	q
-ख़ >	Kh
-ग़ >	G
-ज़ >	z
-फ़ >	f
+क़	q
+ख़ >	kh
+ग़ >	gh
+ड़ >	r
+ढ़ >	rh
+ज़	z
+फ़	f
+झ़	zh
 #ड़	.D/R
 #ढ़	.Dh/Rh
+
+कस <	x

@@ -1,4 +1,6 @@
+NOLOWER
 SCRIPT smallcaps
+ALIAS small caps
 
 ᴀ	a
 ʙ	b
@@ -16,14 +18,14 @@ SCRIPT smallcaps
 ɴ	n
 ᴏ	o
 ᴘ	p
-#'q' is missing
+#'q' is missing, proposed for Unicode as ꞯ U+A7AF.
 ʀ	r
 ꜱ	s
 ᴛ	t
 ᴜ	u
 ᴠ	v
 ᴡ	w
-#'x' is missing
+x <	x	# Same as regular lowercase.
 ʏ	y
 ᴢ	z
 
@@ -40,3 +42,50 @@ SCRIPT smallcaps
 ᴨ	π
 ᴪ	ψ
 ꭥ	ω
+
+ʛ	ɠ
+ᴕ	ȣ
+ᴚ	ɹ
+ꝶ	ꝵ
+
+A <	A
+B <	B
+C <	C
+D <	D
+E <	E
+F <	F
+G <	G
+H <	H
+I <	I
+J <	J
+K <	K
+L <	L
+M <	M
+N <	N
+O <	O
+P <	P
+Q <	Q
+R <	R
+S <	S
+T <	T
+U <	U
+V <	V
+W <	W
+X <	X
+Y <	Y
+Z <	Z
+Æ <	Æ
+Œ <	Œ
+Ð <	Ð
+Ʒ <	Ʒ
+Ǝ <	Ǝ
+Ł <	Ł
+Ɔ <	Ɔ
+Ɯ <	Ɯ
+Γ <	Γ
+Λ <	Λ
+Π <	Π
+Ψ <	Ψ
+Ω <	Ω
+Ɠ <	Ɠ
+Ȣ <	Ȣ

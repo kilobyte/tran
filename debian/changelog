@@ -1,3 +1,11 @@
+tran (2-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Fixes to smallcaps, devanagari.
+    + "old italic".
+
+ -- Adam Borowski <kilobyte@angband.pl>  Fri, 30 Sep 2016 02:49:01 +0200
+
 tran (1-1) unstable; urgency=medium
 
   * Initial release (Closes: #636017)

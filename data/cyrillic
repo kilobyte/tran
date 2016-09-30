@@ -27,6 +27,7 @@ SCRIPT cyrillic
 кс	x
 к <	q
 л	l
+л <	w
 м	m
 н	n
 о	o
@@ -65,7 +66,7 @@ SCRIPT cyrillic
 ї >	ji
 ґ >	g
 
-# Rare non-Slavic, from Wikipedia.
+# Rare non-Slavic.
 ӑ >	a
 ä >	a
 ә >	a
@@ -122,7 +123,7 @@ SCRIPT cyrillic
 ҍ >	'
 ӭ >	e
 
-#Archaic, from Wikipedia.
+#Archaic.
 ҁ >	ch
 ѹ >	u
 ѡ >	o

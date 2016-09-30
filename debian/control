@@ -26,6 +26,7 @@ Description: transcribe between character scripts (alphabets)
   * futhark (runes)
   * hiragana
   * katakana
+  * old italic
   * ascii (Latin without diacritics or digraphs)
   * fullwidth (double-width ASCII)
   * smallcaps

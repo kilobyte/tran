@@ -1,9 +1,11 @@
 SCRIPT fullwidth
+ALIAS wide
 #CJK "fullwidth" (ie, doublewidth) ASCII characters
 
+U+3000	U+20	# space
 ！	!
 ＂	"
-＃	#	#VERBATIM#
+＃	U+23	# hash
 ＄	$
 ％	%
 ＆	&
