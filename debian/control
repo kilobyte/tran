@@ -36,5 +36,3 @@ Description: transcribe between character scripts (alphabets)
     monospace
   * enclosed alphanumerics: circled, parenthesized, squared, negative
     circled, negative squared, regional indicators
- Support for arabic and hebrew is not possible; if you want some other script
- please let me know.
