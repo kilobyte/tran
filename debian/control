@@ -11,6 +11,7 @@ Vcs-Browser: https://github.com/kilobyte/tran/tree/debian
 Package: tran
 Architecture: all
 Depends: ${misc:Depends}
+Multi-Arch: foreign
 Description: transcribe between character scripts (alphabets)
  This tool lets you transliterate, with a ¼-hearted attempt at transcription,
  both ways between Latin and a number of other writing scripts.  Thus for
