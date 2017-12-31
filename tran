@@ -10,7 +10,7 @@ while(@ARGV)
     $_=shift;
     if (/^-t|--target$/)
     {
-        # No longer required.
+        # Deprecated and ignored.  The syntax used to be: tran -t script
     }
     elsif (/^--data-dir$/)
     {

@@ -29,6 +29,7 @@ Description: transcribe between character scripts (alphabets)
   * hiragana
   * katakana
   * old italic
+  * gothic (Ulfilas' — you may be looking for fraktur instead)
   * ascii (Latin without diacritics or digraphs)
   * fullwidth (double-width ASCII)
   * smallcaps

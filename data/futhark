@@ -2,6 +2,7 @@ SCRIPT futhark
 ALIAS runes
 
 ᛇ	ae
+ᛇ <	æ
 ᚨ	a
 ᛒ	b
 ᚲ <	c
@@ -17,6 +18,7 @@ ALIAS runes
 ᛚ	l
 ᛗ	m
 ᛜ	ng
+ᛜ <	ŋ
 ᚾ	n
 ᛟ	o
 ᚠ <	ph
@@ -25,10 +27,77 @@ ALIAS runes
 ᚱ	r
 ᛊ	s
 ᚦ	th
+ᚦ <	þ
 ᛏ	t
 ᚢ	u
 ᚡ	v
 ᚹ	w
 ᚲᛊ	x
-ᚤ	y	#Anglo-Saxon, sometimes medieval
+ᚣ	y	#Anglo-Saxon
 ᛉ	z
+
+#Other time periods
+ᚤ >	y
+ᚥ >	w
+ᚧ	ð	#medieval
+ᚩ >	o
+ᚪ >	a
+ᚫ >	ae
+ᚬ >	o
+ᚭ >	o
+ᚮ >	o
+ᚯ >	oe
+ᚰ >	on
+ᚳ >	c
+ᚵ >	g
+ᚶ >	ng
+ᚸ >	g
+ᚻ >	h
+ᚼ >	h
+ᚽ >	h
+ᚿ >	n
+ᛀ >	n
+ᛂ >	e
+ᛄ >	j
+ᛅ >	a
+ᛆ >	a
+ᛋ >	s
+ᛌ >	s
+ᛍ >	c
+ᛎ >	z
+ᛐ >	t
+ᛑ >	d
+ᛔ > 	p
+ᛕ >	p
+ᛘ >	m
+ᛙ >	m
+ᛛ > 	l
+ᛝ >	ng
+ᛠ >	ea
+ᛡ >	io
+ᛢ >	cw
+ᛣ >	k
+ᛤ >	kk
+ᛥ >	st
+ᛦ >	r
+ᛧ >	r
+ᛨ >	r
+ᛪ >	x
+#Punctuation
+᛫ >	U+0020
+᛬ >	.
+᛭ >	+
+#Calendar year symbols
+#ᛮ >	17
+#ᛯ >	18
+#ᛰ >	19
+#Tolkien's inventions
+ᛱ >	k
+ᛲ >	sh
+ᛳ > 	oo
+#Franks casket
+ᛴ >	o
+ᛵ >	i
+ᛶ >	e
+ᛷ >	a
+ᛸ >	ae
