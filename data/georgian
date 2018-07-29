@@ -1,0 +1,84 @@
+SCRIPT georgian
+ALIAS mkhedruli
+
+ა	a
+ბ	b
+გ	g
+დ	d
+ე	e
+ვ	v
+ზ	z
+ჱ >	ey	#Svan
+თ	t
+ი	i
+კ	k'
+ლ	l
+მ	m
+ნ	n
+ჲ	y	#Mingrelian, Laz, Svan, foreign
+ო	o
+პ	p'
+ჟ	zh
+რ	r
+ს	s
+ტ	t'
+ჳ	w	#Svan, in Georgian only for foreign words
+უ	u
+ფ	p
+ქ	k
+ღ	gh
+ყ	q
+შ	sh
+ჩ	ch
+ც	ts
+ძ	dz
+წ	c	#ts'
+ჭ	ch'
+ხ	kh
+ხ <	x
+ჯ	j
+ჰ	h
+ჶ	f	#only foreign
+
+
+SCRIPT mtavruli
+# small caps / title
+
+Ა	a
+Ბ	b
+Გ	g
+Დ	d
+Ე	e
+Ვ	v
+Ზ	z
+Ჱ >	ey
+Თ	t
+Ი	i
+Კ	k'
+Ლ	l
+Მ	m
+Ნ	n
+Ჲ	y
+Ო	o
+Პ	p'
+Ჟ	zh
+Რ	r
+Ს	s
+Ტ	t'
+Ჳ	w
+Უ	u
+Ფ	p
+Ქ	k
+Ღ	gh
+Ყ	q
+Შ	sh
+Ჩ	ch
+Ც	ts
+Ძ	dz
+Წ	c
+Ჭ	ch'
+Ხ	kh
+Ხ <	x
+Ჯ	j
+Ჰ	h
+Ჶ	f

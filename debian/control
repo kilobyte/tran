@@ -3,7 +3,7 @@ Section: text
 Priority: optional
 Maintainer: Adam Borowski <kilobyte@angband.pl>
 Build-Depends: debhelper (>=11~)
-Standards-Version: 4.1.3
+Standards-Version: 4.1.5
 Homepage: https://github.com/kilobyte/tran
 Vcs-Git: https://github.com/kilobyte/tran.git -b debian
 Vcs-Browser: https://github.com/kilobyte/tran/tree/debian
@@ -30,6 +30,9 @@ Description: transcribe between character scripts (alphabets)
   * katakana
   * old italic
   * gothic (Ulfilas' — you may be looking for fraktur instead)
+  * georgian (mkhedruli)
+  * mtavruli (also Georgian)
+  * armenian
   * ascii (Latin without diacritics or digraphs)
   * fullwidth (double-width ASCII)
   * smallcaps
