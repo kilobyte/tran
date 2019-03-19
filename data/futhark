@@ -1,5 +1,6 @@
 SCRIPT futhark
 ALIAS runes
+# Elder Futhark, borrowing missing letters from later periods.
 
 ᛇ	ae
 ᛇ <	æ
