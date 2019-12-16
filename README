@@ -30,3 +30,5 @@ squared: 🅂🅀🅄🄰🅁🄴🄳
 negative circled: 🅝🅔🅖🅐🅣🅘🅥🅔 🅒🅘🅡🅒🅛🅔🅓
 negative squared: 🅽🅴🅶🅰🆃🅸🆅🅴 🆂🆀🆄🅰🆁🅴🅳
 regional indicators: 🇷🇪🇬🇮🇴🇳🇦🇱 🇮🇳🇩🇮🇨🇦🇹🇴🇷🇸
+(since recently, environments tend to show indicators as flags rather than
+enclosed letters — support is inconsistent, though)

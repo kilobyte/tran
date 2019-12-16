@@ -1,5 +1,6 @@
 SCRIPT georgian
 ALIAS mkhedruli
+# Georgian national system.
 
 ა	a
 ბ	b
@@ -44,41 +45,41 @@ ALIAS mkhedruli
 SCRIPT mtavruli
 # small caps / title
 
-Ა	a
-Ბ	b
-Გ	g
-Დ	d
-Ე	e
-Ვ	v
-Ზ	z
-Ჱ >	ey
-Თ	t
-Ი	i
-Კ	k'
-Ლ	l
-Მ	m
-Ნ	n
-Ჲ	y
-Ო	o
-Პ	p'
-Ჟ	zh
-Რ	r
-Ს	s
-Ტ	t'
-Ჳ	w
-Უ	u
-Ფ	p
-Ქ	k
-Ღ	gh
-Ყ	q
-Შ	sh
-Ჩ	ch
-Ც	ts
-Ძ	dz
-Წ	c
-Ჭ	ch'
-Ხ	kh
+Ა <	a
+Ბ <	b
+Გ <	g
+Დ <	d
+Ე <	e
+Ვ <	v
+Ზ <	z
+#Ჱ >	ey
+Თ <	t
+Ი <	i
+Კ <	k'
+Ლ <	l
+Მ <	m
+Ნ <	n
+Ჲ <	y
+Ო <	o
+Პ <	p'
+Ჟ <	zh
+Რ <	r
+Ს <	s
+Ტ <	t'
+Ჳ <	w
+Უ <	u
+Ფ <	p
+Ქ <	k
+Ღ <	gh
+Ყ <	q
+Შ <	sh
+Ჩ <	ch
+Ც <	ts
+Ძ <	dz
+Წ <	c
+Ჭ <	ch'
+Ხ <	kh
 Ხ <	x
-Ჯ	j
-Ჰ	h
-Ჶ	f
+Ჯ <	j
+Ჰ <	h
+Ჶ <	f

@@ -1,3 +1,11 @@
+tran (5-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Handles mkhedruli uppercasing to mtavruli in new Unicode.
+      (closes: #946353)
+
+ -- Adam Borowski <kilobyte@angband.pl>  Mon, 16 Dec 2019 05:41:47 +0100
+
 tran (4-1) unstable; urgency=medium
 
   * New upstream release.

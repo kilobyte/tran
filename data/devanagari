@@ -1,4 +1,5 @@
 SCRIPT devanagari
+# Based on Hunterian transliteration (India govt standard).
 
 #Vowels
 अ	a

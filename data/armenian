@@ -1,4 +1,6 @@
 SCRIPT armenian
+# Based on Hübschmann-Meillet, with back-conversion from ISO 9985.
+# In some cases English digraphs are preferred over diacritics.
 
 ա	a
 բ	b
