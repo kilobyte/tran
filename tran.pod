@@ -24,7 +24,7 @@ default is latin.  Specify "I<list>" to get the list of supported scripts.
 =item B<-d>, B<--debug>
 
 marks characters that haven't been touched in color.  The output must go to a
-terminal, "B<less -R>" or something that can understand ANSI colors.
+terminal, "B<less -R>", or something that can understand ANSI colors.
 
 =back
 
@@ -44,7 +44,7 @@ pure 7-bit text, use "B<tran ascii|perl -CIO -pe 'tr /\x1-\x7e/?/c'>"
 
 Not all of your recipients may have all required fonts, especially for Plane
 1 scripts.  Such support is especially bad on old terminals that use bitmap
-fonts, such as I<xterm>, text-mode Linux or pre-Windows 10 console.
+fonts, such as I<xterm>, text-mode Linux, or pre-Windows 10 console.
 
 =head1 BUGS
 
