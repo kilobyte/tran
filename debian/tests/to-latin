@@ -1,0 +1,14 @@
+#!/bin/bash
+
+tran <<END | diff -u - <(cat <<MEH
+a quik brown fox peed over the lazy dog.
+Suka blyad’
+BMP is for the weak.
+dupa
+MEH
+)
+ᚨ ᛩᚢᛁᚲ ᛒᚱᛟᚹᚾ ᚠᛟᚲᛊ ᛈᛖᛖᛞ ᛟᚡᛖᚱ ᚦᛖ ᛚᚨᛉᚣ ᛞᛟᚷ.
+Сука блядь
+ℬℳ𝒫 𝒾𝓈 𝒻ℴ𝓇 𝓉𝒽ℯ 𝓌ℯ𝒶𝓀.
+둪아
+END
