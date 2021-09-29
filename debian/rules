@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ 
+	dh $@
 
 override_dh_auto_build-indep:
 	LC_ALL=C.UTF-8 dh_auto_build -i
