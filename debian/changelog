@@ -1,3 +1,10 @@
+tran (5-3) unstable; urgency=medium
+
+  * Fix the watch file.
+  * dh 13.
+
+ -- Adam Borowski <kilobyte@angband.pl>  Wed, 29 Sep 2021 20:51:11 +0200
+
 tran (5-2) unstable; urgency=medium
 
   * An autopkgtest.
