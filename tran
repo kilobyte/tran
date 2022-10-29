@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w -CIOE
+#!/usr/bin/perl -w -CSA
 use strict;
 
 my $TARGET;
